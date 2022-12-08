@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c $CFILE -o echo o
+gcc -c $CFILE -o $(echo $CFILE.o | rev | cut -b 1,2,5- | rev)
