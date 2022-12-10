@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main
+ * main - Entry point
  *
  * Return: Allow success
 */
@@ -13,7 +13,7 @@ int main(void)
 	{
 		for (a = b; a <= 9; a++)
 		{
-			if (a != 0)
+			if (a != b)
 			{
 			putchar(x + '0');
 			putchar(a + '0');
@@ -27,6 +27,6 @@ int main(void)
 		b++;
 		x++;
 	}
-	putchar('\n');	
+	putchar('\n');
 		return (0);
 }
