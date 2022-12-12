@@ -6,29 +6,34 @@
 */
 int main(void)
 {
-	int p = 0, q = 0, r = 0, s = 0;
-
-	while (p < 9)
+	int p, q, r, s;
+	
+	for (p = 0; p <= 9; p++)
 	{
-		while (q < 9)
+		for (q = 0; q <= 8; q++)
 		{
-			while (r < 9)
+			for (r = q; r <= 9; r++)
 			{
-				while (s < 9)
+				for (s = 0; s <= 9; s++)
 				{
+					if (!(p == r && q == s) || !(p == q && p == r && p == s && q == r && q == s && s == r))
+					{
 					putchar(p + '0');
 					putchar(q + '0');
 					putchar(' ');
 					putchar(r + '0');
 					putchar(s + '0');
+					if (!(p == 9 && q == 8 && r == 9 && s == 9))
+					{
 					putchar(',');
-					s++;
+					putchar(' ');
+					}
+					}
+
 				}
-				r++;
 			}
-			q++;
 		}
-		p++;
 	}
+	putchar('\n');
 	return (0);
 }
