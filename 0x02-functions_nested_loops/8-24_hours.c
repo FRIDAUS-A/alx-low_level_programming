@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * jack_bauer - a function that prints every minute of the time
- * 
+ *
  * Return: Allow success
 */
 void jack_bauer(void)
