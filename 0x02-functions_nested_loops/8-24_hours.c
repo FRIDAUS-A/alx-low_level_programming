@@ -14,15 +14,12 @@ void jack_bauer(void)
 			{
 				for (d = 0; d <= 9; d++)
 				{
-					if (!(a % 10 == 2 && a % 100 == 3 && c == 5 && d == 9))
-					{
 					_putchar((a / 10) + '0');
 					_putchar((a % 10) + '0');
 					_putchar(':');
 					_putchar(c + '0');
 					_putchar(d + '0');
 					_putchar('\n');
-					}
 				}
 				d = 0;
 			}
