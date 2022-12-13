@@ -17,7 +17,7 @@ void jack_bauer(void)
 					if (!(a % 10 == 2 && a % 100 == 3 && c == 5 && d == 9))
 					{
 					_putchar((a % 10) + '0');
-					_putchar(a % 100);
+					_putchar((a % 100) + '0');
 					_putchar(':');
 					_putchar(c + '0');
 					_putchar(d + '0');
