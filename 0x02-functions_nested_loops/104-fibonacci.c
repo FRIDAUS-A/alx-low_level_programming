@@ -6,12 +6,12 @@
 */
 int main(void)
 {
-	unsigned long long int  a_1 = 1, a_2 = 2;
-	unsigned long long int n;
+	unsigned long int  a_1 = 1, a_2 = 2;
+	unsigned long  int n;
 
 	for (n = 0; n < 49; n++)
 	{
-		printf("%llu, %llu", a_1, a_2);
+		printf("%lu, %lu", a_1, a_2);
 		if (n != 48)
 		{
 			putchar(',');
