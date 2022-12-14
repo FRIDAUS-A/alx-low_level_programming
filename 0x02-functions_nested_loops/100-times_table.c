@@ -7,33 +7,36 @@
 void print_times_table(int n)
 {
 	int row, column, result, next_result;
-
-	for (row = 0; row <= n && row < 15 && row > 0; row++)
+	
+	if ( n >= 0 && n <= 15)
 	{
-		for (column = 0; column <= n; n++)
+		for (row = 0; row <= n; row++)
 		{
-			result = row * column;
-			next_result = row * (column + 1);
-			if (result <= 9)
-				_putchar(result + '0');
-			else if (result >= 10)
+			for (column = 0; column <= n; n++)
 			{
-				if (result >= 100)
+				result = row * column;
+				next_result = row * (column + 1);
+				if (result <= 9)
+					_putchar(result + '0');
+				else if (result >= 10)
 				{
-					_putchar(result / 100 + '0');
-					_putchar((result % 100) / 10 + '0');
-				}
-				if (result < 100)
-					_putchar(result / 10 + '0');
-				_putchar(result % 10 + '0');
-				if (next_result >= 0 && column != n)
-				{
-					_putchar(',');
-					_putchar(' ');
+					if (result >= 100)
+					{
+						_putchar(result / 100 + '0');
+						_putchar((result % 100) / 10 + '0');
+					}
+					if (result < 100)
+						_putchar(result / 10 + '0');
+					_putchar(result % 10 + '0');
+					if (next_result >= 0 && column != n)
+					{
+						_putchar(',');
+						_putchar(' ');
 					if (next_result >= 10)
 						_putchar(' ');
 					if (next_result >= 100)
 						_putchar(' ');
+					}
 				}
 			}
 		}
