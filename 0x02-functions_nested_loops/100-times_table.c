@@ -28,6 +28,7 @@ void print_times_table(int n)
 					if (result < 100)
 						_putchar(result / 10 + '0');
 					_putchar(result % 10 + '0');
+				}
 					if (next_result >= 0 && column != n)
 					{
 						_putchar(',');
@@ -38,7 +39,6 @@ void print_times_table(int n)
 						_putchar(' ');
 					}
 				}
-			}
 		}
 	}
 	_putchar('\n');
