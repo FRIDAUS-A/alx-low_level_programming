@@ -12,7 +12,7 @@ void print_times_table(int n)
 	{
 		for (row = 0; row <= n; row++)
 		{
-			for (column = 0; column <= n; n++)
+			for (column = 0; column <= n; column++)
 			{
 				result = row * column;
 				next_result = row * (column + 1);
@@ -40,6 +40,6 @@ void print_times_table(int n)
 					}
 				}
 		}
+		_putchar('\n');
 	}
-	_putchar('\n');
 }
