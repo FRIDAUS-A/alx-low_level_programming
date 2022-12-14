@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * main - Entry point
- *
+ * Description: test for a number
  * Return: Allow success
 */
 int main(void)
