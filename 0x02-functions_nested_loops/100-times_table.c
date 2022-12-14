@@ -38,8 +38,8 @@ void print_times_table(int n)
 					if (next_result <  100)
 						_putchar(' ');
 					}
-					_putchar('\n');
 				}
+			_putchar('\n');
 		}
 	}
 }
