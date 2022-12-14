@@ -15,7 +15,13 @@ void print_to_98(int n)
 				_putchar(n / 10 + '0');
 				_putchar(n++ % 10 + '0');
 			}
-			else if (n < 0 && n >= -99)
+			else if (n < -10 && n >= -99)
+			{
+				_putchar('-');
+				_putchar((-1 * n) / 10 + '0');
+				_putchar((-1 * n++) % 10 + '0');
+			}
+			else if (n < 0 && n >= -9)
 			{
 				_putchar('-');
 				_putchar((-1 * n) / 10 + '0');
