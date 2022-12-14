@@ -6,11 +6,12 @@
 */
 int main(void)
 {
-	int n,  a_1 = 1, a_2 = 2;
+	long int  a_1 = 1, a_2 = 2;
+	int n;
 
 	for (n = 0; n < 25; n++)
 	{
-		printf("%d, %d", a_1, a_2);
+		printf("%ld, %ld", a_1, a_2);
 		if (n != 24)
 		{
 			putchar(',');
