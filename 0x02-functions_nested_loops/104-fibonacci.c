@@ -6,13 +6,13 @@
 */
 int main(void)
 {
-	long int  a_1 = 1, a_2 = 2;
+	unsigned long long int  a_1 = 1, a_2 = 2;
 	int n;
 
-	for (n = 0; n < 39; n++)
+	for (n = 0; n < 49; n++)
 	{
-		printf("%ld, %ld", a_1, a_2);
-		if (n != 38)
+		printf("%llu, %llu", a_1, a_2);
+		if (n != 48)
 		{
 			putchar(',');
 			putchar(' ');
