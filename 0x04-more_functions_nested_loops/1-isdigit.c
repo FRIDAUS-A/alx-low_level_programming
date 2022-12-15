@@ -2,7 +2,6 @@
 
 /**
  * _isdigit - a function that checks for a digit (0 through 9)
- * Description: a function that checks for a digit
  * @c: parameter of the function
  * Return: Allow success
 */
