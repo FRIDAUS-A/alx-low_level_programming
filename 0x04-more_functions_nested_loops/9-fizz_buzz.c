@@ -13,9 +13,7 @@ int main(void)
 	{
 		if (a % 3 != 0 && a % 5 != 0)
 		{
-			if (a >= 10)
-				_putchar(a / 10 + '0');
-			_putchar(a % 10 + '0');
+			printf("%d", a);
 		}
 		else if (a % 3 == 0 && a % 5 != 0)
 			printf("Fizz");
@@ -24,7 +22,7 @@ int main(void)
 		else if (a % 3 == 0 && a % 5 == 0)
 			printf("FizzBuzz");
 		if (a != 100)
-			_putchar(' ');
+			printf(" ");
 	}
-	_putchar('\n');
+	printf("\n");
 }
