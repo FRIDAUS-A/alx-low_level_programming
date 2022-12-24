@@ -8,10 +8,11 @@ void print_rev(char *s)
 {
 	int len = 0;
 
-	while(s[len])
+	while (s[len])
 	{
 		len++;
 	}
+	len = len - 1;
 	while (len >= 0)
 	{
 		_putchar(s[len]);
