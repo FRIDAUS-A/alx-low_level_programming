@@ -10,7 +10,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	int count = 0, len_src = 0;
 
-	while (*(dest + count++))
+	while (*(src + count++))
 		len_src++;
 		while (*(src + count) && count < n)
 		{
