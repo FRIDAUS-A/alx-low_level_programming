@@ -10,22 +10,9 @@ int _strcmp(char *s1, char *s2)
 {
 	int count;
 
-	while (s1[count] && s2[count])
+	while (s1[count] && s2[count] && (s1[count] == s2[count]))
 	{
-		if (s1[count] == s2[count++])
-		{
-			return (0);
-		}
-		else if (s1[count] != s2[count] && atoi(s1[count]) > atoi(s2[count]))
-		{
-			return (atoi(s1[count]) - atoi(s2[count]));
-					break;
-		}
-		else if (s1[count] != s2[count] && atoi(s1[count]) < atoi(s2[count]))
-		{
-			return (atoi(s2[count]) - atoi(s1[count]));
-					break;
-		}
 		count++;
 	}
+	return (s1[count] - s2[count]);
 }
