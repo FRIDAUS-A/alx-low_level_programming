@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 /**
  * _strcmp - a function that compares two strings
  * @s1: first parameter
@@ -8,9 +7,9 @@
 */
 int _strcmp(char *s1, char *s2)
 {
-	int count;
+	int count = 0;
 
-	while (s1[count] && s2[count] && (s1[count] == s2[count]))
+	while ((s1[count] && s2[count]) && (s1[count] == s2[count]))
 	{
 		count++;
 	}
