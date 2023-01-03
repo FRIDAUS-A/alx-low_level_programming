@@ -23,4 +23,5 @@ char *_strncpy(char *dest, char *src, int n)
 			count++;
 		}
 		dest[count] = '\0';
+		return (dest);
 }
