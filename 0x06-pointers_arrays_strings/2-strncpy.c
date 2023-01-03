@@ -9,9 +9,14 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	int count = 0;
-
-	while (*(src + count) && count < n)
-		*(dest + count) = *(src + count++);
+	
+	while (*(dest + count++)
+		len_src++;
+		while (*(src + count) && count < n)
+		{
+			if (count < n)
+				*(dest + count) = *(src + count++);
+			else
 *(dest + count) = '\0';
 	return (dest);
 }
