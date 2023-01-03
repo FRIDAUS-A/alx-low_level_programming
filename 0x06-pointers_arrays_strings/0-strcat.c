@@ -1,5 +1,4 @@
-iinclude "main.h"
-#include <stdio.h>
+#include "main.h"
 /**
  * _strcat - a function that concatenates two string
  * @dest: first parameter
