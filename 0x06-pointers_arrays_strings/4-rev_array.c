@@ -12,6 +12,6 @@ void reverse_array(int *a, int n)
 
 	for (count = 0; count < n; count++)
 		*(p + count) = *(a + count);
-	for (count = 0; count < n; count++)
+	for (count = 0; count < n && n >= 0; count++)
 		*(a + count) = *(p + --n);
 }
