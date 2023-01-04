@@ -9,10 +9,10 @@ void reverse_array(int *a, int n)
 {
 	int *p, count;
 
-	n = n -1;
-	for (count = 0; *(a + count); count++)
+	for (count = 0; *(a + count) != '\0'; count++)
 		*(p + count) = *(a + count);
 	*(p + count) = '\0';
-	for (count = 0; *(p + count) && n >= 0; count++)
-		*(a + count) = *(p + n--);
+	for (count = 0; n >= 0; count++)
+		*(a + count) = *(p + --n);
+	*(a + count) = '\0';
 }
