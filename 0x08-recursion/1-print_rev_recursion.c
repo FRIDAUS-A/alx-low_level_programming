@@ -6,17 +6,20 @@
 */
 void _print_rev_recursion(char *s)
 {
-	int n = 0;
-	if (*(s + n) != '\0')
+	int n = 0, pos = 0;
+
+	if (*(s + pos + n) != '\0')
 	{
-		s++;
+		pos++;
 		_print_rev_recursion(s);
 	}
-	else if (*(s + n) == '\0')
+	else if (*(s + pos + n) == '\0' && pos != 0)
 	{
-		s--;
+		pos--;
 		n++;
-		_putchar(*s);
+		_putchar(*(s + pos));
 		_print_rev_recursion(s);
 	}
+	else 
+		_putchar('\n');
 }
