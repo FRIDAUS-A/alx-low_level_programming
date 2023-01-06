@@ -3,7 +3,8 @@
 #include <stdlib.h>
 /**
  * main - Entry point
- *
+ * @argc: argument count
+ * @argv: argument vector
  * Return: Allow success
 */
 int main(int argc, char *argv[])
