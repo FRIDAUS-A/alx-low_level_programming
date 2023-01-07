@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("%d\n", atoi(argv[argc - 2]) * atoi(argv[argc - 3]));
+		printf("%d\n", atoi(argv[argc - 2]) * atoi(argv[argc - 1]));
 		return (0);
 	}
 }
