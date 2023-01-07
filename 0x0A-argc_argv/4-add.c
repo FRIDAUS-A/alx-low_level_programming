@@ -26,10 +26,10 @@ int main(int argc, char *argv[])
 			if (i == argc - 1)
 			{
 				printf("%d\n", add);
-				return (0);
 			}
 		}
 	}
 	else
 		printf("0\n");
+	return (0);
 }
