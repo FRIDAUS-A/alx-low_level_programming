@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.h>
 /**
  * main - Entry point
  * @argc: argument count
@@ -9,6 +8,12 @@
 */
 int main(int argc, char *argv[])
 {
-	printf("%d\n", argc - 1);
+	int i = 0;
+
+	while (i < argc - 1)
+	{
+		i++;
+	}
+	printf("%d\n", i);
 	return (0);
 }
