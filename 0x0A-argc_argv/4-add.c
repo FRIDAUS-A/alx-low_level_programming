@@ -19,7 +19,10 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			printf("Error\n");
+			if (i == 1)
+				printf("0\n");
+			else
+				printf("Error\n");
 			return (1);
 			break;
 		}
@@ -29,10 +32,5 @@ int main(int argc, char *argv[])
 			return (0);
 		}
 		i++;
-	}
-	if (i == 1)
-	{
-		printf("0\n");
-		return (1);
 	}
 }
