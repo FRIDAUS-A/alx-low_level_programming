@@ -8,29 +8,31 @@
 */
 int main(int argc, char *argv[])
 {
-	int i = 0, add = 0;
-	
-	++i;
-	while (i < argc)
+	int i, add = 0;
+
+	if (argc > 1)
 	{
-		if (!(atoi(argv[i]) == 0) || argv[i] == 0)
+		for (i = 1; i < argc; i++)
 		{
-			add = add + atoi(argv[i]);
-		}
-		else
-		{
-			if (i == 1)
-				printf("0\n");
+			if (!(atoi(argv[i]) == 0) || argv[i] == 0)
+			{
+				add = add + atoi(argv[i]);
+			}
 			else
+			{
 				printf("Error\n");
-			return (1);
-			break;
+				return (1);
+			}
+			if (i == argc - 1)
+			{
+				printf("%d\n", add);
+				return (0);
+			}
 		}
-		if (i == argc - 1)
-		{
-			printf("%d\n", add);
-			return (0);
-		}
-		i++;
+	}
+	else
+	{
+		printf("0\n");
+		return (1);
 	}
 }
