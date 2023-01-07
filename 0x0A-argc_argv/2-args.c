@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 	while (*argv)
 	{
 		printf("%s", *argv);
-		if (*arg != argv[argc - 1])
+		if (*argv != argv[argc - 1])
 			printf('\n');
 		argv++;
 	}
