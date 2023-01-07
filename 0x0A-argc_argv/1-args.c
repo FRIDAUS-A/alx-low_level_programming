@@ -10,11 +10,7 @@ int main(int argc, char *argv[])
 {
 	int i = 0;
 
-	while (argv[i])
-	{
-		i++;
-	}
-	printf("%d", i - 1);
-	_putchar('\n');
+	printf("%d\n", argc - 1);
+	(void)argv;
 	return (0);
 }
