@@ -8,7 +8,7 @@
 char *_strdup(char *str)
 {
 	char *ptr;
-	int len_str = 0, i = 0;
+	unsigned long int len_str = 0, i = 0;
 
 	while (*(str + i))
 	{
