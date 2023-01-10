@@ -8,7 +8,7 @@
 char *_strdup(char *str)
 {
 	char *ptr;
-	unsigned int len_str = 0, i = 0;
+	int len_str = 0, i = 0;
 
 	while (*(str + i))
 	{
@@ -16,7 +16,7 @@ char *_strdup(char *str)
 		i++;
 	}
 	ptr = (char *)malloc((len_str + 1) * sizeof(char));
-	if (str == NULL || ptr == NULL)
+	if (str == NULL || ptr)
 		return (NULL);
 	for (i = 0; i < len_str; i++)
 		*(ptr + i) = *(str + i);
