@@ -19,7 +19,10 @@ char *_strdup(char *str)
 	if (str == NULL || ptr == NULL)
 		return (NULL);
 	while (i < len_str)
-		*(ptr + i) = *(str + i++);
+	{
+		*(ptr + i) = *(str + i);
+		i++;
+	}
 	*(ptr + i) = '\0';
 	return (ptr);
 }
