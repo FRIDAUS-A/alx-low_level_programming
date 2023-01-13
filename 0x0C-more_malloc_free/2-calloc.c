@@ -10,11 +10,16 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
+	char *filler;
+	unsigned int index;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	ptr = malloc(size * nmemb);
 	if (ptr == NULL)
 		return (NULL);
+	filler = ptr;
+	for (index = 0; index < nmemb; index++)
+		filler = '\0';
 	return (ptr);
 }
