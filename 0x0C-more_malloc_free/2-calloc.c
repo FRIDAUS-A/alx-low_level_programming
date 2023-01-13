@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "main.h"
 /**
  * _calloc - a function that allocate memory using malloc
