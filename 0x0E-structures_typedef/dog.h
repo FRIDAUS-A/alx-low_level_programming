@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef DOG_H
+#define DOG_H
 
 /**
  * struct dog - a container for two string and a float
@@ -15,4 +15,4 @@ struct dog
 	char *owner;
 }
 
-#endif /* MAIN_H */
+#endif /* DOG_H */
