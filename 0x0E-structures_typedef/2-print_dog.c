@@ -8,7 +8,6 @@
 */
 void print_dog(struct dog *d)
 {
-	d = malloc(sizeof(struct dog));
 	if (d != NULL)
 	{
 		if (d->name == NULL)
