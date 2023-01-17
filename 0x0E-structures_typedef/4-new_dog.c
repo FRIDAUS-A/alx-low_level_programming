@@ -1,23 +1,9 @@
 #include "dog.h"
 #include <stdlib.h>
-char *_strcpy(char *dest, char *src);
-/**
- * _strcpy - copy from src to dest
- * @dest: destination
- * @src: source
- * Return: Allow success
-*/
-char *_strcpy(char *dest, char *src)
-{
-	while (*src)
-		*(dest++) = *(src++);
-	*dest = '\0';
-	return (dest);
-}
 /**
  * new_dog - creates new dog
  * @name: holds the name of dog
- * @age: holds the age
+ * @age: holds the age of dog
  * @owner: holds the name of owner
  * Return: Allow success
 */
@@ -48,8 +34,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(ptr);
 		return (NULL);
 	}
-	ptr->name = _strcpy(ptr->name, name);
-	ptr->owner = _strcpy(ptr->owner, owner);
+	ptr->name = name;
+	ptr->owner = owner;
 	ptr->age = age;
 	return (ptr);
 }
