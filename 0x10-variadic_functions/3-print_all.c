@@ -66,11 +66,11 @@ void print_all(const char * const format, ...)
 	while (format[i] && format)
 	{
 		j = 0;
-		while (format[i] != func[j].name && j <  4)
+		while (format[i] != *(func[j].name) && j <  4)
 		{
 			j++;
 		}
-		if (format[i] == func[j].name)
+		if (format[i] == *(func[j].name))
 			func[j].ptr(input);
 		if (format[i])
 			printf(", ");
