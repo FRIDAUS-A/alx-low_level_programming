@@ -71,7 +71,7 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		if (format[i] == func[j].name)
-			func[j].ptr;
+			func[j].ptr(input);
 		if (format[i])
 			printf(", ");
 		i++;
