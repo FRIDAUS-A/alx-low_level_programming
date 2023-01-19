@@ -1,4 +1,52 @@
 #include "variadic_functions.h"
+
+/**
+ * print_char - prints character
+ * @input: input
+ * Return: Allow success
+*/
+void print_char(va_list input)
+{
+	printf("%c", va_arg(input, int));
+}
+
+/**
+ * print_int - prints integer
+ * @input: input
+ * Return: Allow success
+*/
+void print_int(va_list input)
+{
+	printf("%i", va_arg(input, int));
+}
+
+/**
+ * print_float - prints float
+ * @input: input
+ * Return: Allow success
+*/
+
+void print_float(va_list input)
+{
+	printf("%f", va_arg(input, double));
+}
+
+/**
+ * print_string - print string
+ * @input: input
+ * Return: Allow success
+*/
+
+void print_string(va_list input)
+{
+	char *str;
+	
+	str = va_arg(input, char *);
+	if (str == NULL)
+		printf("(nil)");
+	else
+		printf("%s", str);
+}
 /**
  * print_all - a function that prints anything
  * @format: list of all type of arg passed
@@ -7,19 +55,24 @@
 void print_all(const char * const format, ...)
 {
 	va_list input;
-	int i = 0;
-
+	int i, j = 0;
+	
 	va_start(input, format);
-	while (format[i])
+	new func[] = {
+		{'c', print_char},
+		{'i', print_int},
+		{'f', print_float},
+		{'s', print_string},
+	};
+	while (format[i] && format)
 	{
-		if (format[i] == 'c')
-			printf("%c", va_arg(input, int));
-		else if (format[i] == 'i')
-			printf("%i", va_arg(input, int));
-		else if (format[i] == 'f')
-			printf("%f", va_arg(input, double));
-		else if (format[i] == 's')
-			printf("%s", va_arg(input, char *));
+		j = 0;
+		while (format[i] != func[j].name && j <  4)
+		{
+			j++;
+		}
+		if (format[i] == func[j].name)
+			func[j].name;
 		if (format[i])
 			printf(", ");
 		i++;
