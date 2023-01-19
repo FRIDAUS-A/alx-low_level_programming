@@ -35,7 +35,6 @@ void print_float(va_list input)
  * @input: input
  * Return: Allow success
 */
-
 void print_string(va_list input)
 {
 	char *str;
@@ -46,6 +45,7 @@ void print_string(va_list input)
 	else
 		printf("%s", str);
 }
+
 /**
  * print_all - a function that prints anything
  * @format: list of all type of arg passed
@@ -71,7 +71,7 @@ void print_all(const char * const format, ...)
 			j++;
 		}
 		if (format[i] == func[j].name)
-			func[j].name;
+			func[j].ptr;
 		if (format[i])
 			printf(", ");
 		i++;
