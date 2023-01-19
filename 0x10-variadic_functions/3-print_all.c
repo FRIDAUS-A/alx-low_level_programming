@@ -40,7 +40,7 @@ void print_float(va_list input)
 void print_string(va_list input)
 {
 	char *str;
-	
+
 	str = va_arg(input, char *);
 	if (str == NULL)
 		printf("(nil)");
@@ -56,14 +56,14 @@ void print_all(const char * const format, ...)
 {
 	va_list input;
 	int i, j = 0;
-	
-	va_start(input, format);
 	new func[] = {
 		{'c', print_char},
 		{'i', print_int},
 		{'f', print_float},
 		{'s', print_string},
 	};
+
+	va_start(input, format);
 	while (format[i] && format)
 	{
 		j = 0;
