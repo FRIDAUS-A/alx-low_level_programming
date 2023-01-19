@@ -7,7 +7,9 @@
 */
 void print_char(va_list input)
 {
-	printf("%c", va_arg(input, int));
+	char letter = va_arg(input, int);
+
+	printf("%c", letter);
 }
 
 /**
@@ -17,7 +19,9 @@ void print_char(va_list input)
 */
 void print_int(va_list input)
 {
-	printf("%i", va_arg(input, int));
+	int num = va_arg(input, int);
+
+	printf("%i", num);
 }
 
 /**
@@ -27,7 +31,9 @@ void print_int(va_list input)
 */
 void print_float(va_list input)
 {
-	printf("%f", va_arg(input, double));
+	float decimal = va_arg(input, int);
+
+	printf("%f", decimal);
 }
 
 /**
