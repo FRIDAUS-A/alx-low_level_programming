@@ -11,7 +11,7 @@
 */
 typedef struct new
 {
-	char *name;
+	char name;
 
 	void (*ptr)(va_list);
 } new;
