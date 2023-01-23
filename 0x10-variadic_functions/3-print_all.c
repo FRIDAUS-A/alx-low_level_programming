@@ -50,7 +50,7 @@ void print_string (va_list input)
  * printed to the standard output
  * Return: Alllow success
 */
-void print_all(const char *format, ...)
+void print_all(const char * const format, ...)
 {
 	new func[] = {
 		{'c', print_char},
