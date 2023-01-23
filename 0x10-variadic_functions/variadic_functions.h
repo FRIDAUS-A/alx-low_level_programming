@@ -13,7 +13,7 @@ typedef struct new
 {
 	char name;
 
-	void (*ptr)(va_list);
+	void (*ptr)(va_list input);
 } new;
 
 /* new is the typedef for struct new */
