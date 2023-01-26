@@ -8,7 +8,7 @@ size_t print_list(const list_t *h)
 {
 	size_t len_node = 0;
 
-	while (h->next)
+	while (h)
 	{
 		if (h->str)
 			printf("[%d] %s", h->len, h->str);
