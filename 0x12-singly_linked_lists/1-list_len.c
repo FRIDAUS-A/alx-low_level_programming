@@ -7,8 +7,11 @@
 size_t list_len(const list_t *h)
 {
 	size_t len_node = 0;
-	
-	while (h->str)
+
+	while (h)
+	{
 		len_node++;
+		h = h->next;
+	}
 	return (len_node);
 }
