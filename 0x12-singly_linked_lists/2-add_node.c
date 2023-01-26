@@ -9,12 +9,19 @@ list_t *add_node(list_t **head, const char *str)
 {
 	int len_str = 0;
 	list_t *new;
+	char *dup_str;
 
 	if (str == NULL)
 		return (NULL);
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
+	dup_str = strdup(str);
+	if (dup_str == NULL)
+	{
+		free(new);
+		return (NULL);
+	}
 	while (str)
 		len_str++;
 	new->len = len_str;
