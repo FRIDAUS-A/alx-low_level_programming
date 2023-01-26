@@ -7,7 +7,7 @@
 */
 list_t *add_node(list_t **head, const char *str)
 {
-	int len_str = 0;
+	size_t len_str = 0;
 	list_t *new;
 	char *dup_str;
 
