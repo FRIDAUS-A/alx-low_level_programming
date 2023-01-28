@@ -7,11 +7,11 @@
 */
 list_t *add_node(list_t **head, const char *str)
 {
-	unsigned int len_str;
+	int len_str;
 	list_t *new;
- 	char *dup_str;
+	char *dup_str;
 
-	new = (list_t*)malloc(sizeof(list_t));
+	new = (list_t *)malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
 	dup_str = strdup(str);
