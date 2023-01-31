@@ -4,12 +4,11 @@
  * @head: pointer to the first node
  * Return: Allow success
 */
-void free_listint (listint_t *head)
+void free_listint(listint_t *head)
 {
 	while (head)
 	{
-		free(head->n);
-		head = head->next;
 		free(head);
+		head = head->next;
 	}
 }
