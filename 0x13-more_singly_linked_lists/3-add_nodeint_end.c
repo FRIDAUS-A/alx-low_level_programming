@@ -20,9 +20,12 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	{
 		while (*head)
 		{
-			*head = (*head)->next;
+			if ((*head)->next != NULL)
+				*head = (*head)->next;
+			else
+				break;
 		}
 		(*head)->next = new;
 	}
-	return (new);
+	return (*head);
 }
