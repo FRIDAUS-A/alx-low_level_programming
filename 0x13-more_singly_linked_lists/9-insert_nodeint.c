@@ -22,7 +22,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		len_node++;
 		*head = (*head)->next;
 	}
-	*head = tmp_1;
 	if (idx > (len_node - 1))
 		return (NULL);
 	while (count < idx - 1 && (*head))
