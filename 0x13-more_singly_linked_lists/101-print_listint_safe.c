@@ -6,13 +6,13 @@
 */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t ien_node = 0;
+	size_t len_node = 0;
 
 	if (head == NULL)
 		exit(98);
 	while (head)
 	{
-		printf("[%p] %d\n", head->next, head->new);
+		printf("[%p] %d\n", head->next, head->n);
 		len_node++;
 		head = head->next;
 	}
