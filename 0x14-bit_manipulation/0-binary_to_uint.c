@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * binary_to_uint - covert from binary to decimal
  * @b: binary value to be converted
