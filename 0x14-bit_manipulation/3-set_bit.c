@@ -8,9 +8,10 @@
 int set_bit(unsigned long int *n, unsigned int index);
 {
 	unsigned int count = 0, len_bin = 0;
-	unsigned long int num;
+	unsigned long int num, tmp;
 	int *array_int;
-
+	
+	tmp = *n;
 	while (*n > 1)
 	{
 		num = *n >> 1;
@@ -22,7 +23,7 @@ int set_bit(unsigned long int *n, unsigned int index);
 	if (array_int == NULL)
 		return (-1);
 	*n = tmp;
-	while (n > 1)
+	while (*n > 1)
 	{
 		num = *n >> 1;
 		array_int[count++] = n - (num << 1);
