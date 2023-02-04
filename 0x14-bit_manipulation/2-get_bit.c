@@ -9,7 +9,7 @@ int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned int count = 0;
 	unsigned long int num;
-	int *array_int;
+	unsigned int *array_int;
 
 	while (n > 1)
 	{
