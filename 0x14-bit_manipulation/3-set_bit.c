@@ -14,8 +14,8 @@ int set_bit(unsigned long int *n, unsigned int index);
 	tmp = *n;
 	while (*n > 1)
 	{
-		num = *n >> 1;
-		*n = *n >> 1;
+		num = (*n) >> 1;
+		(*n) = (*n) >> 1;
 		len_bin++;
 	}
 	len_bin = len_bin + 1;
@@ -25,9 +25,9 @@ int set_bit(unsigned long int *n, unsigned int index);
 	*n = tmp;
 	while (*n > 1)
 	{
-		num = *n >> 1;
-		array_int[count++] = n - (num << 1);
-		*n = *n >> 1;
+		num = (*n) >> 1;
+		array_int[count++] = (*n) - (num << 1);
+		*n = (*n) >> 1;
 	}
 	if (*n == 1)
 		array_int[count] = 1;
