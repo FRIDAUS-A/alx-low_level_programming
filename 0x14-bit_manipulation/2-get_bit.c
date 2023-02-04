@@ -11,8 +11,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned long int tmp, num;
 	int *array_int;
 
-	if (index < 0)
-		return (-1);
 	tmp = n;
 	while (n > 1)
 	{
@@ -21,7 +19,9 @@ int get_bit(unsigned long int n, unsigned int index)
 		len_bin++;
 	}
 	len_bin = len_bin + 1;
-	array_int = malloc(len_bin * sizeof(unsigned long int));
+	array_int = malloc(len_bin * sizeof(int));
+	if (array_int == NULL)
+		return(-1);
 	n = tmp;
 	while (n > 1)
 	{
