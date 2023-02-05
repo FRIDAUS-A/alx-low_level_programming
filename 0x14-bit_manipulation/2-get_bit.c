@@ -11,8 +11,6 @@ int get_bit(unsigned long int n, unsigned int index)
 	unsigned long int tmp, num;
 	int *array_int;
 
-	if (n >= 64)
-		return (-1);
 	tmp = n;
 	while (n > 1)
 	{
