@@ -7,7 +7,9 @@
 void print_binary(unsigned long int n)
 {
 	unsigned long int num;
-
+	
+	if (n == 0)
+		_putchar(0 + '0');
 	if (n >= 1)
 	{
 		num = (n >> 1);
