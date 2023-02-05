@@ -8,7 +8,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int len_b = 0, sum = 0, index = 0, tmp_b, num;
 
-	if (b == NULL || b == "")
+	if (b == NULL)
 		return (0);
 	while (b[index])
 	{
@@ -17,6 +17,8 @@ unsigned int binary_to_uint(const char *b)
 		len_b++;
 		index++;
 	}
+	if (len_b == 0)
+		return (0);
 	len_b = len_b - 1;
 	tmp_b = len_b;
 	for (index = 0; index <= len_b; index++)
