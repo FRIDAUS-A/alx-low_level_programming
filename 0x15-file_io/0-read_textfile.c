@@ -19,7 +19,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	r_open = open(filename, O_RDONLY);
 	r_read = read(r_open, buffer, letters);
 	r_write = write(STDOUT_FILENO, buffer, r_read);
-	if (r_open == -1 || r_read == -1 || r_write == -1 || r_read != r_write)
+	if (r_open == -1 || r_read == -1 || r_write == -1 || r_write != r_read)
 	{
 		free(buffer);
 		return (0);
