@@ -5,6 +5,7 @@
  * index index of a dlistint_t linked list.
  * @head: stores the address of the pointer to the first node
  * @index: index
+ * Return: Allow success
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -21,6 +22,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	if (index > (len_node - 1))
 		return (-1);
 	tmp = *head;
+	if (len_node == 1)
+	{
+		free(tmp);
+		return (1);
+	}
 	while (count < index && tmp)
 	{
 		count++;
@@ -28,6 +34,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		tmp = tmp->next;
 	}
 	pre->next = tmp->next;
+	if (idx != len_node - 1)
+		(tmp->next)->prev = pre;
 	free(tmp);
 		return (1);
 }
