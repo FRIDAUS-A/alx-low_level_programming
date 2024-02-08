@@ -15,6 +15,7 @@ if (array)
 {
 for (count = 0; count < size; count++)
 {
+printf("Value checked array[%ld] = [%d]\n", count, array[count]);
 if (value == array[count])
 {
 return (count);
