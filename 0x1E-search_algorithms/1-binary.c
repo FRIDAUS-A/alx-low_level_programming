@@ -26,7 +26,7 @@ while (index <= right)
 printf("%ld", index);
 if (index != right)
 {
-printf(",");
+printf(", ");
 }
 index++;
 }
